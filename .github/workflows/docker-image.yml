@@ -19,5 +19,5 @@ jobs:
     - name: Build and Push the Docker image
       run: |
           echo "dckr_pat_CwecW5U-RCs39bwcXNx1MfdfegE" | docker login -u "pantaleone" --password-stdin docker.io
-          docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+          docker build . --file Dockerfile --tag latest
           docker push docker.io/pantaleone/testopenex:latest
