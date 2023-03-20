@@ -269,8 +269,15 @@ const Timeline = () => {
           name="timeline"
           pixelRatio={2}/>
       </div>
+      <div style={{ float: 'right' }}>
+        <ExportButtons
+          domElementId="timelinebrief"
+          name="timelinebrief"
+          pixelRatio={2}/>
+      </div>
       <div className="clearfix"/>
       <div id="timeline">
+      <div id="timelinebrief">
       {sortedAudiences.length > 0 ? (
         <div className={classes.container}>
           <div className={classes.names}>
@@ -412,6 +419,7 @@ const Timeline = () => {
         </div>
       )} 
       <div className="clearfix" />
+      </div>
       <Grid container={true} spacing={3} style={{ marginTop: 50 }}>
         <Grid item={true} xs={6}>
           <Typography variant="h4">{t('Pending injects')}</Typography>
