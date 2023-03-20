@@ -410,8 +410,7 @@ const Timeline = () => {
             </div>
           </div>
         </div>
-      )}
-      </div>
+      )} 
       <div className="clearfix" />
       <Grid container={true} spacing={3} style={{ marginTop: 50 }}>
         <Grid item={true} xs={6}>
@@ -557,6 +556,7 @@ const Timeline = () => {
           </Paper>
         </Grid>
       </Grid>
+      </div>
       <Drawer
         open={selectedInject !== null}
         keepMounted={false}
