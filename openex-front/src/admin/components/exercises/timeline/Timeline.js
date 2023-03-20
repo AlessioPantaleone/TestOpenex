@@ -31,6 +31,7 @@ import InjectDefinition from '../injects/InjectDefinition';
 import InjectStatusDetails from '../injects/InjectStatusDetails';
 import ProgressBarCountdown from '../../../../components/ProgressBarCountdown';
 import AnimationMenu from '../AnimationMenu';
+import ExportButtons from '../../../../components/ExportButtons';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -262,7 +263,14 @@ const Timeline = () => {
           />
         </div>
       </div>
-      <div className="clearfix" />
+      <div style={{ float: 'right' }}>
+        <ExportButtons
+          domElementId="timeline"
+          name="timeline"
+          pixelRatio={2}/>
+      </div>
+      <div className="clearfix"/>
+      <div id="timeline">
       {sortedAudiences.length > 0 ? (
         <div className={classes.container}>
           <div className={classes.names}>
@@ -403,6 +411,7 @@ const Timeline = () => {
           </div>
         </div>
       )}
+      </div>
       <div className="clearfix" />
       <Grid container={true} spacing={3} style={{ marginTop: 50 }}>
         <Grid item={true} xs={6}>
