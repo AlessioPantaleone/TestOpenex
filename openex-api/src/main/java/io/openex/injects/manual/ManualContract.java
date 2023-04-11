@@ -13,6 +13,7 @@ import java.util.Map;
 import static io.openex.contract.Contract.manualContract;
 import static io.openex.contract.ContractDef.contractBuilder;
 import static io.openex.contract.fields.ContractTextArea.textareaField;
+import static io.openex.contract.fields.ContractAudience.audienceField;
 import static io.openex.helper.SupportedLanguage.en;
 import static io.openex.helper.SupportedLanguage.fr;
 
@@ -42,7 +43,9 @@ public class ManualContract extends Contractor {
     public List<Contract> contracts() {
         ContractConfig contractConfig = getConfig();
         List<ContractElement> instance = contractBuilder()
-                .mandatory(textareaField("content", "Content")).build();
+                .mandatory(textareaField("content", "Content"))
+                .mandatory(audienceField("audiences", "Audiences", Multiple))
+                .build();
         return List.of(manualContract(contractConfig, MANUAL_DEFAULT,
                 Map.of(en, "Manual", fr, "Manuel"), instance));
     }
