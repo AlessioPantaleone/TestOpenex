@@ -8,6 +8,7 @@ import {
   SpeakerNotesOutlined,
   ApiOutlined,
   EmojiEventsOutlined,
+  FactCheckOutlined,
 } from '@mui/icons-material';
 import {
   Mastodon,
@@ -58,7 +59,7 @@ const iconSelector = (type, variant, fontSize, done, disabled) => {
       );
     case 'openex_manual':
       return (
-        <NotificationsActiveOutlined
+        <FactCheckOutlined
           style={style}
           fontSize={fontSize}
           sx={{ color: color || '#009688' }}
